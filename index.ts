@@ -1,6 +1,13 @@
-import { base_age } from "./src/one";
-import { myUser } from "./src/user-module";
+import Express from "express";
 
-const asd = 10;
+const app = Express();
 
-console.log("asdasd", myUser, base_age);
+app.listen(5000, () => {
+  console.log("Server has started", 5000);
+});
+
+app.get("/start", (req, res) => {
+  res.json({
+    result: "successful result",
+  });
+});
